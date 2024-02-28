@@ -24,11 +24,7 @@ public class Player {
     private String weakFoot;
     private String skillMoves;
 
-
-
     private String country;
-
-
 
 
     public Player() {

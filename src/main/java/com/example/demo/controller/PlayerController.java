@@ -47,4 +47,26 @@ public class PlayerController {
         return player;
     }
 
+    @DeleteMapping("/players/{id}")
+    public void deletePlayer(@PathVariable Long id) {
+        playerService.deletePlayer(id);
+    }
+
+    @GetMapping("/findAllPlayers")
+    public List<Player> findAll() {
+        return playerService.findAll();
+    }
+
+    @PostMapping("/createPlayer")
+    public Player createPlayer(@RequestBody Player player) {
+        return playerService.createPlayer(player);
+    }
+
+    /*
+    @PatchMapping("/partialUpdatePlayers/{id}")
+    public Player partialUpdatePlayer(@PathVariable Long id, @RequestBody Player player) {
+        return playerService.partialUpdate(id, player);
+    }
+     */
+
 }
